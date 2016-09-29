@@ -1,0 +1,239 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, window {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  transition: all ease 0.5s;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+	height: 100%;
+	font-family: 'PT Sans', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+main {
+	height: auto;
+	transition: all ease 0.5s;
+	position: relative;
+	top: 0vh;
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+section > .content {
+	background: none;
+	width: 84%;
+	/*padding: 8%;*/
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section > .content > h1 {
+	font-size: 48px;
+	text-align: center;
+	font-family: 'PT Serif', cursive;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+
+section > .content > p {
+	line-height: 1.5;
+	max-width: 620px;
+	width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	font-size: 22px;
+}
+
+section > .content > p > em {
+	position: relative;
+	z-index: 2;
+}
+
+section > .content > p > em::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	bottom: 2px;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: yellow
+}
+
+section code {
+	background: #eee;
+	font-family: "Source Code Pro", "PT Mono", monospace;
+	text-align: left;
+	font-size: 18px;
+	color: #1e1e1e;
+	width: 100%;
+	max-width: 620px;
+	padding: 10px;
+	margin: 10px 0px;
+	border-left: 8px solid #ccc;
+}
+
+
+@media (max-width: 600px) {
+	section > .content > h1 {
+		font-size: 30px;
+	}
+	section > .content > p {
+		font-size: 16px;
+	}
+	section > .content > code {
+		font-size: 16px;
+	}
+}
+
+section:nth-of-type(odd) {
+	background: #331771;
+	color: #afeaed;
+}
+
+section:nth-of-type(even) {
+	background: #afeaed;
+	color: #331771;
+}
+
+@keyframes pulse {
+	0% {
+		transform: translateY(-2px);
+	}
+	70% {
+		transform: translateY(2px);
+	}
+	100% {
+		transform: translateY(2px);
+	}
+
+}
+
+section:first-of-type .up {
+	display: none;
+}
+
+section:last-of-type .down {
+	display: none;
+}
+
+section .up, section .down {
+	opacity: 0;
+	position: absolute;
+	font-size: 20px;
+	width: 100%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	cursor: pointer !important;
+}
+
+section .up span, section .down span {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 30px;
+	align-items: center;
+	justify-content: center;
+}
+
+section .up:hover, section .down:hover {
+	opacity: 1;
+}
+
+section .up {
+	top: 0px;
+}
+
+section .down {
+	transform: rotate(180deg);
+	bottom: 0px;
+}
+
+section:nth-of-type(odd) .up span, section:nth-of-type(odd) .down span {
+	color: #331771;
+	background: #afeaed;
+}
+
+section:nth-of-type(even) .up span, section:nth-of-type(even) .down span {
+	color: #afeaed;
+	background: #331771;
+}
+
+section .up span, section .down span {
+	cursor: pointer;
+	animation: pulse 0.5s linear 2s infinite alternate;
+}
+
+.tag {
+	color: #ff7b29;
+}
+
+.attribute {
+	color: #2db34a;
+}
+
+.value {
+	color: #0087cc;
+}
+
+
+
+
+
+

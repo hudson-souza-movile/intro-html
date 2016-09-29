@@ -1,10 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Intor HTML</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif|PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>HTML 101 - Aula #1</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		var height = $(window).height();
+		$(".up").on('click', function(){
+			// $(window).animate({
+			// 	scrollTop: '-='+height;
+			// }, 2000);
+			window.scrollBy(0, -height);
+		});
+		$(".down").on('click', function(){
+			// $(window).animate({
+			// 	scrollTop: '+='+height;
+			// }, 2000);
+			window.scrollBy(0, height);
+		});
+	});
+    </script>
 </head>
 <body>
-	
+	<main>
+		<section class="first">
+			<div class="content">
+				<h1>Agradecimentos</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Esses módulos de aulas foram feitos com auxílio de um guia feito por Shay Howe. Thanks Shay 👍</p>
+				<img src="https://www.thatconference.com/cloud/profilephotos/Shay-Howe-72a38ea3-9dc6-4312-bdea-0201ef408119.png" style="width: 40%; height: 40%; display: block; border-radius: 50%; margin-top: 40px;">
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section class="first">
+			<div class="content">
+				<h1>HyperText Markup Language</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>O HTML dá ao conteúdo do seu site estrutura e significado definindo esse conteúdo como cabeçalhos, parágrafos, menus, rodapés, images, links, etc...</p>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>Entendendo os termos</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Enquanto estiver começando a trabalhar com HTML, pode ser que encontre alguns termos novos e estranhos. Com o tempo você vai acabar se tornando familiar com eles, então não se preocupe que vai ficando mais fácil depois 😊</p>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>Elemento</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Elementos são designadores que definem a estrutura e conteúdo dos objetos na páginas. Alguns dos mais usados são <em>headings</em>, <em>parágrafos</em>, <em>spans</em> e <em>divs</em>. Elementos são identificados com tags</p>
+				<code>
+					&lt;a&gt;
+				</code>
+
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>tags</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>O uso de &lt; &gt;, ao redor do elemento, define uma <em>tag</em>. Tags, geralmente, são compostas por um par de abertura e fechamento.</p>
+				<p>A abertura de tag marca o começo daquele elemento. Composta de <em>menor que</em> + <em>nome do elemento</em> + <em>maior que</em></p>
+				<p>O fechamento de tag encerra esse mesmo elemento. É composto de <em>menor que</em> + <em>barra</em> + <em>nome do elemento</em> + <em>maior que</em></p>
+				<p>Tudo que for escrito dentro dessas tags será o conteúdo dela, então, para criar uma tag de link (a), escreve-se:</p>
+				<code>
+					&lt;a&gt; html &lt;/a&gt;
+				</code>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>atributos</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Atributos são propriedades usadas para dar informações adicionais sobre o elemento. Os mais comuns são:
+				<br>
+				<br><em>id</em>: Identificam um elemento;
+				<br><em>class</em>: Classificando um elemento;
+				<br><em>src</em>: Procuram a fonte (source) que vai ser embedada no elemento;
+				<br><em>href</em>: Referem-se a hyperlinks locais ou externos.
+				</p>
+				<code>
+					&lt;a id="link" class="menu" href="http://movile.com"&gt; html &lt;/a&gt;
+				</code>
+				<p>
+				Resultado: <a href="http://movile.com" target="_blank">Movile</a>
+				</p>
+				<code>
+					<span class="tag">&lt;img</span> src="img/foto.png"&gt;
+				</code>
+				<div style="display: flex; align-items: center; width: 100%; text-align: left; max-width: 620px;">
+				<p>Resultado:</p>  <img src="https://www.thatconference.com/cloud/profilephotos/Shay-Howe-72a38ea3-9dc6-4312-bdea-0201ef408119.png" style="width: 50px; height: 50px; margin-left: 10px;">
+				</div>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+	</main>
 </body>
 </html>
