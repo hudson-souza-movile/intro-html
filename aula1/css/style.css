@@ -162,14 +162,6 @@ section:nth-of-type(even) {
 
 }
 
-section:first-of-type .up {
-	display: none;
-}
-
-section:last-of-type .down {
-	display: none;
-}
-
 section .up, section .down {
 	opacity: 0;
 	position: absolute;
@@ -181,6 +173,18 @@ section .up, section .down {
 	justify-content: center;
 	border-radius: 50px;
 	cursor: pointer !important;
+}
+
+section:first-of-type .up {
+	display: none;
+}
+
+section:first-of-type .down {
+	opacity: 1;
+}
+
+section:last-of-type .down {
+	display: none;
 }
 
 section .up span, section .down span {

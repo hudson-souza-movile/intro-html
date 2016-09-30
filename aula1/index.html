@@ -5,20 +5,36 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>HTML 101 - Aula #1</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- 	<script>
+	$(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+	</script> -->
 	<script>
 	$(document).ready(function(){
-		var height = $(window).height();
-		$(".up").on('click', function(){
-			// $(window).animate({
-			// 	scrollTop: '-='+height;
-			// }, 2000);
-			window.scrollBy(0, -height);
+		$(".up").click(function(){
+			var height = $(window).height();
+			$('html, body').animate({
+	          scrollTop: '-='+height
+	        }, 1000);
 		});
-		$(".down").on('click', function(){
-			// $(window).animate({
-			// 	scrollTop: '+='+height;
-			// }, 2000);
-			window.scrollBy(0, height);
+		$(".down").click(function(){
+			var height = $(window).height();
+			$('html, body').animate({
+	          scrollTop: '+='+height
+	        }, 1000);
+			// window.scrollBy(0, height);
 		});
 	});
     </script>
