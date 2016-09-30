@@ -7,16 +7,17 @@ $(document).ready(function(){
 	});
 	$(document).keydown(function(e) {
     	switch(e.which) {
-	        case 37:
-	        scrollUp();
-	        break;
+
+    		case 37:
+    		prevPage();
+    		break;
 
 	        case 38:
 	        scrollUp();
 	        break;
 
 	        case 39:
-	        scrollDown();
+	        nextPage();
 	        break;
 
 	        case 40:
@@ -26,6 +27,13 @@ $(document).ready(function(){
 	        default: return; // exit this handler for other keys
 		}
 	    e.preventDefault(); // prevent the default action (scroll / move caret)
+	});
+	
+	$(".next").on('click', function(){
+		nextPage();
+	});
+	$(".prev").on('click', function(){
+		prevPage();
 	});
 });
 function scrollUp() {
@@ -39,4 +47,18 @@ function scrollDown() {
 	$('html, body').animate({
       scrollTop: '+='+height
     }, 1000);
+}
+function nextPage() {
+	$("main").css("transform", "translateX(-100vw)");
+	var href = $(".next").attr("title");
+	window.setTimeout(function(){
+		window.location.href = "../"+href;
+	}, 500);
+}
+function prevPage() {
+	$("main").css("transform", "translateX(100vw)");
+	var href = $(".prev").attr("title");
+	window.setTimeout(function(){
+		window.location.href = "../"+href;
+	}, 500);
 }
