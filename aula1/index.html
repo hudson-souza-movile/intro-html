@@ -125,7 +125,7 @@
 			<div class="content">
 				<p>Elementos são designadores que definem a estrutura e conteúdo dos objetos na páginas. Alguns dos mais usados são <em>headings</em>, <em>parágrafos</em>, <em>spans</em> e <em>divs</em>. Elementos são identificados com tags</p>
 				<code>
-					&lt;a&gt;
+					<span class="tag">&lt;a&gt;</span>
 				</code>
 
 			</div>
@@ -147,7 +147,7 @@
 				<p>O fechamento de tag encerra esse mesmo elemento. É composto de [menor que] + [barra] + [nome do elemento] + [maior que]</p>
 				<p>Tudo que for escrito dentro dessas tags será o conteúdo dela, então, para criar uma tag de link (a), escreve-se:</p>
 				<code>
-					&lt;a&gt; html &lt;/a&gt;
+					<span class="tag">&lt;a&gt;</span> html <span class="tag">&lt;/a&gt;</span>
 				</code>
 			</div>
 			<div class="up"><span>↑</span></div>
@@ -167,21 +167,23 @@
 				<br>
 				<br><em>id</em>: Identificam um elemento;
 				<br><em>class</em>: Classificando um elemento;
-				<br><em>src</em>: Procuram a fonte (source) que vai ser embedada no elemento;
+				<br><em>src</em>: Procuram a fonte (source) que vai ser embutida no elemento;
 				<br><em>href</em>: Referem-se a hyperlinks locais ou externos.
 				</p>
 				<code>
-					&lt;a id="link" class="menu" href="http://movile.com"&gt; html &lt;/a&gt;
+					<span class="tag">&lt;a</span>
+					<span class="attribute">id="</span><span class="value">link</span><span class="attribute">"</span> <span class="attribute">class="</span><span class="value">menu</span><span class="attribute">" href="</span><span class="value">http://movile.com</span><span class="attribute">"</span><span class="tag">&gt;</span> Movile <span class="tag">&lt;/a&gt;</span>
+					<br><br>
+					<a href="http://movile.com" target="_blank">Movile</a>
 				</code>
 				<p>
-				Resultado: <a href="http://movile.com" target="_blank">Movile</a>
 				</p>
 				<code>
-					<span class="tag">&lt;img</span> src="img/foto.png"&gt;
+					<span class="tag">&lt;img</span> <span class="attribute"> src="</span><span class="value">img/foto.png</span><span class="attribute">"</span><span class="tag">&gt;</span>
+					<br><br>
+					<img src="https://www.thatconference.com/cloud/profilephotos/Shay-Howe-72a38ea3-9dc6-4312-bdea-0201ef408119.png" style="width: 50px; height: 50px; margin-left: 10px;">
 				</code>
-				<div style="display: flex; align-items: center; width: 100%; text-align: left; max-width: 620px;">
-				<p>Resultado:</p>  <img src="https://www.thatconference.com/cloud/profilephotos/Shay-Howe-72a38ea3-9dc6-4312-bdea-0201ef408119.png" style="width: 50px; height: 50px; margin-left: 10px;">
-				</div>
+
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
