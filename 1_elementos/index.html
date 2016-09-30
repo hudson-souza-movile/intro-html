@@ -5,66 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>HTML 101 - Aula #1</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<!-- 	<script>
-	$(function() {
-	  $('a[href*="#"]:not([href="#"])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html, body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});
-	</script> -->
-	<script>
-	$(document).ready(function(){
-		$(".up").click(function(){
-	        scrollUp();
-		});
-		$(".down").click(function(){
-			scrollDown();
-		});
-		$(document).keydown(function(e) {
-	    	switch(e.which) {
-		        case 37:
-		        scrollUp();
-		        break;
-
-		        case 38:
-		        scrollUp();
-		        break;
-
-		        case 39:
-		        scrollDown();
-		        break;
-
-		        case 40:
-		        scrollDown();
-		        break;
-
-		        default: return; // exit this handler for other keys
-			}
-		    e.preventDefault(); // prevent the default action (scroll / move caret)
-		});
-	});
-	function scrollUp() {
-		var height = $(window).height();
-		$('html, body').animate({
-          scrollTop: '-='+height
-        }, 1000);
-	}
-	function scrollDown() {
-		var height = $(window).height();
-		$('html, body').animate({
-          scrollTop: '+='+height
-        }, 1000);
-	}
-    </script>
+	<script src="js/scroll.js"></script>
 </head>
 <body>
 	<main>
@@ -181,7 +122,7 @@
 				<code>
 					<span class="tag">&lt;img</span> <span class="attribute"> src="</span><span class="value">img/foto.png</span><span class="attribute">"</span><span class="tag">&gt;</span>
 					<br><br>
-					<img src="https://www.thatconference.com/cloud/profilephotos/Shay-Howe-72a38ea3-9dc6-4312-bdea-0201ef408119.png" style="width: 50px; height: 50px; margin-left: 10px;">
+					<img src="https://fillmurray.com/50/50" style="width: 50px; height: 50px; margin-left: 10px;">
 				</code>
 
 			</div>

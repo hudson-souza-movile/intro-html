@@ -1,16 +1,4 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, window {
+html, body, * {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,30 +7,6 @@ time, mark, audio, video, window {
   vertical-align: baseline;
   transition: all ease 0.5s;
   box-sizing: border-box;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-  box-sizing: border-box;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 body {
@@ -98,6 +62,7 @@ section > .content  p {
 }
 
 section > .content  p > em {
+	font-style: normal;
 	position: relative;
 	z-index: 2;
 }
@@ -124,19 +89,6 @@ section code {
 	padding: 10px;
 	margin: 10px 0px;
 	border-left: 8px solid #ccc;
-}
-
-
-@media (max-width: 600px) {
-	section > .content > h1 {
-		font-size: 30px;
-	}
-	section > .content > p {
-		font-size: 18px;
-	}
-	section > .content > code {
-		font-size: 18px;
-	}
 }
 
 section:nth-of-type(odd) {
@@ -172,14 +124,14 @@ section .up, section .down, section .left, section .right {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50px;
-	cursor: pointer !important;
+	cursor: pointer;
 }
 
 section:first-of-type .up {
 	display: none;
 }
 
-section:first-of-type .down {
+section:first-of-type .down, section .left, section .right {
 	opacity: 1;
 }
 
@@ -214,8 +166,12 @@ section .left {
 }
 
 section .down {
-	transform: rotate(180deg);
 	bottom: 0px;
+}
+
+section .down span {
+	display: block;
+	transform: rotate(180deg);
 }
 
 section .right {
@@ -223,11 +179,13 @@ section .right {
 	bottom: 0px;
 }
 
+/* pinta as setas de up e down das filhas ímpares */
 section:nth-of-type(odd) .up span, section:nth-of-type(odd) .down span {
 	color: #331771;
 	background: #afeaed;
 }
 
+/* pinta as setas de up e down das filhas pares */
 section:nth-of-type(even) .up span, section:nth-of-type(even) .down span {
 	color: #afeaed;
 	background: #331771;
@@ -238,6 +196,7 @@ section .up span, section .down span {
 	animation: pulse 0.5s linear 2s infinite alternate;
 }
 
+/*colors*/
 .tag {
 	color: #ff7b29;
 }
@@ -250,6 +209,18 @@ section .up span, section .down span {
 	color: #0087cc;
 }
 
+/*media query*/
+@media (max-width: 600px) {
+	section > .content > h1 {
+		font-size: 30px;
+	}
+	section > .content > p {
+		font-size: 18px;
+	}
+	section > .content > code {
+		font-size: 18px;
+	}
+}
 
 @media screen and (max-width: 415px), screen and (max-height: 415px) {
 	body {
@@ -259,8 +230,6 @@ section .up span, section .down span {
 		display: none;
 	}
 }
-
-
 
 
 
