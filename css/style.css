@@ -301,6 +301,10 @@ section .up span, section .down span {
 	.next {
 		width: 100%;
 	}
+	.next, .prev {
+		text-align: center;
+		font-size: 16px;
+	}
 }
 
 
