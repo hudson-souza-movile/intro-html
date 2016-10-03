@@ -23,7 +23,7 @@
 				<code>
 					<span class="tag">&lt;!DOCTYPE html></span>, <span class="tag">&lt;html></span>, <span class="tag">&lt;head></span>, and <span class="tag">&lt;body></span>
 				</code>
-
+				<p>A primeira linha de todo documento HTML deve declarar o tipo de documento para que o browser saiba o que precisa ler. Se a versão for a última basta &lt;!DOCTYPE html>, senão podemos declarar a versão e depois disso, abrimos a tag &lt;html>.</p>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
@@ -31,29 +31,15 @@
 
 		<section class="first">
 			<div class="content">
-				<h1>HyperText Markup Language</h1>
+				<h1>&lt;head> e &lt;body></h1>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
 		</section>
 		<section>
 			<div class="content">
-				<p>O HTML dá ao conteúdo do seu site estrutura e significado definindo esse conteúdo como cabeçalhos, parágrafos, menus, rodapés, images, links, etc...</p>
-			</div>
-			<div class="up"><span>↑</span></div>
-			<div class="down"><span>↑</span></div>
-		</section>
-
-		<section>
-			<div class="content">
-				<h1>Entendendo os termos</h1>
-			</div>
-			<div class="up"><span>↑</span></div>
-			<div class="down"><span>↑</span></div>
-		</section>
-		<section>
-			<div class="content">
-				<p>Enquanto estiver começando a trabalhar com HTML, pode ser que encontre alguns termos novos e estranhos. Com o tempo você vai acabar se tornando familiar com eles, então não se preocupe que vai ficando mais fácil depois 😊</p>
+				<p>Dentro do &lt;html>, primeiro criamos o elemento &lt;head> (cabeça). Tudo que vai dentro dessa tag não aparece na página propriamente dita. As informaçoes que são colocadas aqui são adicionais para a página: Título (que fica na barra do navegador), metadados que ajudam a encontrar a página e links de arquivos externos, como .css e .js, por exemplo.</p>
+				<p>Todo conteúdo que é visível na página está dentro do &lt;body> (corpo). Isso inclui títulos, parágrafos, tabelas, imagens, menus e outros elementos.</p>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
@@ -61,38 +47,26 @@
 
 		<section>
 			<div class="content">
-				<h1>Elemento</h1>
+				<h1>Estrutura básica</h1>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
 		</section>
 		<section>
 			<div class="content">
-				<p>Elementos são designadores que definem a estrutura e conteúdo dos objetos na páginas. Alguns dos mais usados são <em>headings</em>, <em>parágrafos</em>, <em>spans</em> e <em>divs</em>. Elementos são identificados com tags</p>
 				<code>
-					<span class="tag">&lt;a&gt;</span>
-				</code>
-
-			</div>
-			<div class="up"><span>↑</span></div>
-			<div class="down"><span>↑</span></div>
-		</section>
-
-		<section>
-			<div class="content">
-				<h1>tags</h1>
-			</div>
-			<div class="up"><span>↑</span></div>
-			<div class="down"><span>↑</span></div>
-		</section>
-		<section>
-			<div class="content">
-				<p>O uso de &lt; &gt;, ao redor do elemento, define uma <em>tag</em>. Tags, geralmente, são compostas por um par de abertura e fechamento.</p>
-				<p>A abertura de tag marca o começo daquele elemento. Composta de [menor que] + [nome do elemento] + [maior que]</p>
-				<p>O fechamento de tag encerra esse mesmo elemento. É composto de [menor que] + [barra] + [nome do elemento] + [maior que]</p>
-				<p>Tudo que for escrito dentro dessas tags será o conteúdo dela, então, para criar uma tag de link (a), escreve-se:</p>
-				<code>
-					<span class="tag">&lt;a&gt;</span> html <span class="tag">&lt;/a&gt;</span>
+					<span class="tag">&lt;!DOCTYPE html></span>
+					<br><span class="tag">&lt;html</span> <span class="attribute">lang="</span></span><span class="value">en</span><span class="attribute">"</span><span class="tag">></span>
+					<br><span class="tag">&lt;head></span>
+					    <br><span class="tag">&lt;meta</span> <span class="attribute">charset="</span><span class="value">utf-8</span><span class="attribute">"</span><span class="tag">></span>
+					    <br><span class="tag">&lt;title></span>Hello World<span class="tag">&lt;/title></span>
+					  <br><span class="tag">&lt;/head></span>
+					  <br><span class="tag">&lt;body></span>
+					    <br><span class="tag">&lt;h1></span>Hello World<span class="tag">&lt;/h1></span>
+					    <br><span class="tag">&lt;p></span>This is a web page<span class="tag">&lt;/p></page>
+					  <br><span class="tag">&lt;/body></span>
+					<br><span class="tag">&lt;/html></span>
+					</pre>
 				</code>
 			</div>
 			<div class="up"><span>↑</span></div>
@@ -101,35 +75,27 @@
 
 		<section>
 			<div class="content">
-				<h1>atributos</h1>
+				<h1>elementos<br>"Self-closing"</h1>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
 		</section>
 		<section>
 			<div class="content">
-				<p>Atributos são propriedades usadas para dar informações adicionais sobre o elemento. Os mais comuns são:
-				<br>
-				<br><em>id</em>: Identificam um elemento;
-				<br><em>class</em>: Classificando um elemento;
-				<br><em>src</em>: Procuram a fonte (source) que vai ser embutida no elemento;
-				<br><em>href</em>: Referem-se a hyperlinks locais ou externos.
-				</p>
+				<p>Nem todas as tags que são usadas precisam de encerramento, algumas delas tem todo conteúdo necessário apenas nos atributos ou nem precisam disso também. As mais comuns entre as self-closing são:</p>
 				<code>
-					<span class="tag">&lt;a</span>
-					<span class="attribute">id="</span><span class="value">link</span><span class="attribute">"</span> <span class="attribute">class="</span><span class="value">menu</span><span class="attribute">" href="</span><span class="value">http://movile.com</span><span class="attribute">"</span><span class="tag">&gt;</span> Movile <span class="tag">&lt;/a&gt;</span>
+					Dentro do <span class="tag">&lt;head&gt;</span>
+					<br>
+					<span class="tag">&lt;meta&gt;</span>
+					<span class="tag">&lt;link&gt;</span>
 					<br><br>
-					<a href="http://movile.com" target="_blank">Movile</a>
+					Dentro do <span class="tag">&lt;body&gt;</span>
+					<br>
+					<span class="tag">&lt;br&gt;</span>
+					<span class="tag">&lt;img&gt;</span>
+					<span class="tag">&lt;hr&gt;</span>
+					<span class="tag">&lt;source&gt;</span>
 				</code>
-				<p>
-				</p>
-				<code>
-					<span class="tag">&lt;img</span> <span class="attribute"> src="</span><span class="value">img/foto.png</span><span class="attribute">"</span><span class="tag">&gt;</span>
-					<br><br>
-					<img src="https://fillmurray.com/50/50" style="width: 50px; height: 50px; margin-left: 10px;">
-				</code>
-
-				<a href="javascript:" title='2_estrutura' class="next">Parte 2: Estrutura</a>
 
 			</div>
 			<div class="up"><span>↑</span></div>
