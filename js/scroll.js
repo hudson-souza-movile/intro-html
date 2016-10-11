@@ -72,8 +72,7 @@ function lockScroll() {
 	$(".lock-scroll").toggleClass("lock");
 	$(".lock-scroll").toggleClass("unlock");
 	setTimeout(function(){
-	  $(".lock-scroll").toggleClass("animate-lock");
+	  $(".lock-scroll").addClass("animate-lock");
 	}, 1500);
-	$(".lock-scroll").toggleClass("animate-lock");
-	// $(".lock-scroll").toggleClass("animate-lock");
+	$(".lock-scroll").removeClass("animate-lock");
 }
