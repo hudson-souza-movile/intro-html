@@ -5,6 +5,12 @@ $(document).ready(function(){
 	$(".down").click(function(){
 		scrollDown();
 	});
+	$(".next").on('click', function(){
+		nextPage();
+	});
+	$(".prev").on('click', function(){
+		prevPage();
+	});
 	$(document).keydown(function(e) {
     	switch(e.which) {
 
@@ -24,18 +30,17 @@ $(document).ready(function(){
 	        scrollDown();
 	        break;
 
+	        case 76:
+	        lockScroll();
+	        break;
+
 	        default: return; // exit this handler for other keys
 		}
 	    e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
-	
-	$(".next").on('click', function(){
-		nextPage();
-	});
-	$(".prev").on('click', function(){
-		prevPage();
-	});
+
 });
+
 function scrollUp() {
 	var height = $(window).height();
 	$('html, body').animate({
@@ -61,4 +66,14 @@ function prevPage() {
 	window.setTimeout(function(){
 		window.location.href = "../"+href;
 	}, 500);
+}
+function lockScroll() {
+	$("body").toggleClass("overflow-auto");
+	$(".lock-scroll").toggleClass("lock");
+	$(".lock-scroll").toggleClass("unlock");
+	setTimeout(function(){
+	  $(".lock-scroll").toggleClass("animate-lock");
+	}, 1500);
+	$(".lock-scroll").toggleClass("animate-lock");
+	// $(".lock-scroll").toggleClass("animate-lock");
 }

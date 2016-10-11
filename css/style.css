@@ -35,6 +35,25 @@
 	}
 }
 
+@keyframes lock-unlock {
+	0% {
+		opacity: 0.1;
+		transform: scale(1.5);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.0);
+	}
+	80% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
 html, body, * {
 
   margin: 0;
@@ -55,6 +74,38 @@ body {
 	overflow: hidden;
 }
 
+.overflow-auto {
+	overflow: auto;
+}
+
+.lock-scroll {
+	position: fixed;
+	left: calc(50% - 75px);
+	top: calc(50% - 75px);
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	transform: scale(1);
+}
+
+.lock {
+	background: url(../img/lock.png) no-repeat center center #fff;
+	background-size: 60px auto;
+	/*animation: lock-unlock 1s linear forwards;*/
+}
+
+.unlock {
+	background: url(../img/unlock.png) no-repeat center center #fff;
+	background-size: 60px auto;
+	/*animation: lock-unlock 1s linear forwards;*/
+}
+
+.animate-lock {
+	animation: lock-unlock 1s linear forwards;
+}
 
 main {
 	height: auto;
