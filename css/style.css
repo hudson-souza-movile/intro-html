@@ -104,7 +104,7 @@ body {
 }
 
 .animate-lock {
-	animation: lock-unlock 1s linear forwards;
+	animation: lock-unlock 1s linear 0s forwards;
 }
 
 main {
@@ -347,7 +347,7 @@ section .up span, section .down span {
 	body {
 		overflow: auto;
 	}
-	section .up, section .down {
+	.up, .down {
 		display: none;
 	}
 	.next {
