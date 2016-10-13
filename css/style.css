@@ -330,6 +330,11 @@ section .up span, section .down span {
 	color: #0087cc;
 }
 
+.error {
+	background-color: red;
+	color: white;
+}
+
 /*media query*/
 @media (max-width: 600px) {
 	section > .content > h1 {
@@ -343,12 +348,12 @@ section .up span, section .down span {
 	}
 }
 
-@media screen and (max-width: 415px), screen and (max-height: 415px) {
+@media screen and (max-width: 415px), screen and (max-height: 600px) {
 	body {
 		overflow: auto;
 	}
 	.up, .down {
-		display: none;
+		display: none !important;
 	}
 	.next {
 		width: 100%;

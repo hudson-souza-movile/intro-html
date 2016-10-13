@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif|PT+Sans" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>HTML + CSS 101</title>
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/scroll.js"></script>
+	<script>
+  	function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+    }
+   </script>
 </head>
 <body>
 	<div class="lock-scroll lock"></div>
 	<main>
-		<section class="first">
-		<a href="javascript:" title='1_html' class="prev">Parte 1: HTML</a>
+		<section>
+			<a href="javascript:" title='1_html' class="prev">Parte 1</a>
 			<div class="content">
-				<h1>Cascade Style Sheet</h1>
+				<h1>Elementos block</h1>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
 		</section>
 		<section>
 			<div class="content">
-				<p>CSS são, como o nome diz, estilos em cascata. Isso quer dizer que os estilos vão sendo lidos e incrementados pelo browser ao longo do código. Na prática, esses efeitos são percebidos durante a contrução das páginas, quando alguns estilos sobrepõem outros.</p>
-				<p>Assim como alguns termos do HTML precisam ser conhecidos, o mesmo vai acontecer com CSS</p>
-				<code>
-					<span class="tag">&lt;!DOCTYPE html></span>, <span class="tag">&lt;html></span>, <span class="tag">&lt;head></span>, and <span class="tag">&lt;body></span>
-				</code>
-				<p>A primeira linha de todo documento HTML deve declarar o tipo de documento para que o browser saiba o que precisa ler. Se a versão for a última basta &lt;!DOCTYPE html>, senão podemos declarar a versão e depois disso, abrimos a tag &lt;html>.</p>
+				<p>Elementos <em>block</em> começam em novo linha, ocupam toda a largura disponível e vão se empilhando um em cima do outro conforme são inseridos, como os parágrafos dessa apresentação. Eles podem ser parágrafos, divs, sections, navs, headers, artciles e outros.</p>
+				<p>Elementos block também podem estar inseridos dentro de outro block:</p>
+				<br>
+				<div style="border: 1px solid #000; padding: 10px; width: 100%;">
+					elemento block
+					<div style="border: 1px solid #000; padding: 10px; width: 100%;">elemento block
+						<div style="border: 1px solid #000; padding: 10px; width: 100%;">elemento block</div>
+					</div>
+				</div>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
@@ -34,15 +44,92 @@
 
 		<section>
 			<div class="content">
-				<h1>&lt;head> e &lt;body></h1>
+				<h1>Elementos inline</h1>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
 		</section>
 		<section>
 			<div class="content">
-				<p>Dentro do &lt;html>, primeiro criamos o elemento &lt;head> (cabeça). Tudo que vai dentro dessa tag não aparece na página propriamente dita. As informaçoes que são colocadas aqui são adicionais para a página: Título (que fica na barra do navegador), metadados que ajudam a encontrar a página e links de arquivos externos, como .css e .js, por exemplo.</p>
-				<p>Todo conteúdo que é visível na página está dentro do &lt;body> (corpo). Isso inclui títulos, parágrafos, tabelas, imagens, menus e outros elementos.</p>
+				<p>Elementos <em>inline</em> não começam em novo linha. Eles seguem o fluxo normal e vão se alinhando um ao lado do outro ocupando apenas a largura do seu próprio conteúdo. Esses elementos podem estar um dentro do outro e dentro de um elemento block. </p>
+				<p>lComumente usamos inline para destacar algumas palavras com sublinhados, negritos, itálicos ou com cores diferentes.</p>
+				<br>
+				<div style="border: 1px solid #000; padding: 10px; width: 100%;"><span>Elemento inline que tem um <span style="color: red;">elemento inline</span> dentro dele e os dois estão dentro de um elemento block que agrupa os dois.</span></div>
+				
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section class="first">
+			<div class="content">
+				<h1>Semântica</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<p>Semântica, no HTML, é a prática de dar significado e estrutura aos elementos da página. Existem muitos benefícios nesse uso, incluindo habilitar devices a lerem seu código da forma mais adequada, por exemplo, um leitor de feed, pode pegar o seu primeiro <span class="tag">&lt;h1></span> e o seu primeiro <span class="tag">&lt;p></span> para montar um preview do conteúdo.</p>
+				<p>Além disso, HTML semântico facilita a leitura do código e possíveis retrabalhos.</p>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>&lt;div> e &lt;span></h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p><em>Divs</em> e <em>Spans</em> são dois elementos essenciais para qualquer código HTML mas, ao contrário dos outros, eles não tem nenhum valor semântico, então, servem apenas como containers para serem estilizados.</p>
+				<p>Por exemplo, <em>parágrafos</em> são colocado dentro da tag <span class="tag">&lt;p></span> e títulos são colocados nas tags <span class="tag">&lt;h1></span> até <span class="tag">&lt;h6></span> por serem <em>headings</em>.</p>
+				<p>Divs são elementos block e Spans são elementos inline.</p>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>Classes e ids</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>É normal ver divs e spans com atributos de classe e id. Esses atributos servem pra "nomear" esses elementos para que eles possam ser alvos de links e estilos.</p>
+				<br>
+				<p><em>Classes</em>: A mesma classe pode ser aplicada em mais de um elemento.</p>
+				<code>
+					<span class="tag">&lt;a</span>
+					<span class="attribute">class="</span><span class="value">menu</span><span class="attribute">"</span><span class="tag">&gt;</span> Movile <span class="tag">&lt;/a&gt;</span>
+					<br>
+					<span class="tag">&lt;span</span>
+					<span class="attribute">class="</span><span class="value">menu</span><span class="attribute">"</span><span class="tag">&gt;</span> Movile <span class="tag">&lt;/span&gt;</span>
+				</code>
+				<p>Tanto a tag <span class="tag">&lt;a></span> quanto a <span class="tag">&lt;span></span> tem a classe <em>menu</em></p>
+				<br>
+				<p><em>Ids</em>: também podem ser usados para estilizar, mas apenas 1 elemento.</p>
+				<code>
+					<span class="tag">&lt;div</span>
+					<span class="attribute">id="</span><span class="value">intro</span><span class="attribute">"</span><span class="tag">&gt;</span> Introdução da página <span class="tag">&lt;/div&gt;</span>
+					<br>
+					<span class="tag">&lt;div</span>
+					<span class="attribute">id="</span><span class="value">about</span><span class="attribute">"</span><span class="tag">&gt;</span> Sobre o site <span class="tag">&lt;/div&gt;</span>
+					<br>
+					<span class="tag">&lt;div</span>
+					<span class="error">id="intro"</span><span class="tag">&gt;</span> Outro conteúdo <span class="tag">&lt;/div&gt;</span>
+				</code>
+				<p>Posso repetir um id? <em style="cursor: pointer;" onclick="play()">Clique aqui pra saber</em>. IDs são como serial number de produtos, são usados para identificar um elemento <em>único</em> na página.</p>
+				<audio id="audio" src="no.mp3" ></audio>
+
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
