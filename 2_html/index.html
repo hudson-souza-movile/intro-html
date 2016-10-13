@@ -9,11 +9,27 @@
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/scroll.js"></script>
 	<script>
+		$(document).ready(function(){
+			$(".gif-no-trigger").click(function(){
+				$(".gif-no").fadeIn(500);
+				var audio = document.getElementById("audio");
+				setTimeout(function(){
+					audio.play();
+				}, 4300);
+				setTimeout(function(){
+					$(".gif-no").fadeOut(500);
+				}, 14500);
+			});
+		})
+		
+	</script>
+	<!-- <script>
   	function play(){
        var audio = document.getElementById("audio");
        audio.play();
+       alert("NO GOD PLEASE NO");
     }
-   </script>
+   </script> -->
 </head>
 <body>
 	<div class="lock-scroll lock"></div>
@@ -28,7 +44,7 @@
 		</section>
 		<section>
 			<div class="content">
-				<p>Elementos <em>block</em> começam em novo linha, ocupam toda a largura disponível e vão se empilhando um em cima do outro conforme são inseridos, como os parágrafos dessa apresentação. Eles podem ser parágrafos, divs, sections, navs, headers, artciles e outros.</p>
+				<p>Elementos <em>block</em> começam em uma nova linha, ocupam toda a largura disponível e vão se empilhando um em cima do outro conforme são inseridos, como os parágrafos dessa apresentação. Eles podem ser parágrafos, divs, sections, navs, headers, artciles e outros.</p>
 				<p>Elementos block também podem estar inseridos dentro de outro block:</p>
 				<br>
 				<div style="border: 1px solid #000; padding: 10px; width: 100%;">
@@ -127,8 +143,9 @@
 					<span class="tag">&lt;div</span>
 					<span class="error">id="intro"</span><span class="tag">&gt;</span> Outro conteúdo <span class="tag">&lt;/div&gt;</span>
 				</code>
-				<p>Posso repetir um id? <em style="cursor: pointer;" onclick="play()">Clique aqui pra saber</em>. IDs são como serial number de produtos, são usados para identificar um elemento <em>único</em> na página.</p>
+				<p>Posso repetir um id? <em class="gif-no-trigger" style="cursor: pointer;">Clique aqui pra saber</em>. IDs são como serial number de produtos, são usados para identificar um elemento <em>único</em> na página.</p>
 				<audio id="audio" src="no.mp3" ></audio>
+				<img src="https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif" class="gif-no" alt="">
 
 			</div>
 			<div class="up"><span>↑</span></div>
