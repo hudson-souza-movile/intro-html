@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif|PT+Sans" rel="stylesheet">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdn0.iconfinder.com/data/icons/HTML5/512/HTML_Logo.png">
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,27 +9,11 @@
 	<script src="../js/jquery-3.1.1.min.js"></script>
 	<script src="../js/scroll.js"></script>
 	<script>
-		$(document).ready(function(){
-			$(".gif-no-trigger").click(function(){
-				$(".gif-no").fadeIn(500);
-				var audio = document.getElementById("audio");
-				setTimeout(function(){
-					audio.play();
-				}, 4300);
-				setTimeout(function(){
-					$(".gif-no").fadeOut(500);
-				}, 14500);
-			});
-		})
-		
-	</script>
-	<!-- <script>
-  	function play(){
-       var audio = document.getElementById("audio");
-       audio.play();
-       alert("NO GOD PLEASE NO");
-    }
-   </script> -->
+	  	function play(){
+	       var audio = document.getElementById("audio");
+	       audio.play();
+	    }
+   </script>
 </head>
 <body>
 	<div class="lock-scroll lock"></div>
@@ -67,7 +51,7 @@
 		</section>
 		<section>
 			<div class="content">
-				<p>Elementos <em>inline</em> não começam em novo linha. Eles seguem o fluxo normal e vão se alinhando um ao lado do outro ocupando apenas a largura do seu próprio conteúdo. Esses elementos podem estar um dentro do outro e dentro de um elemento block. </p>
+				<p>Elementos <em>inline</em> não começam em uma nova linha. Eles seguem o fluxo normal e vão se alinhando um ao lado do outro ocupando apenas a largura do seu próprio conteúdo. Esses elementos podem estar um dentro do outro e dentro de um elemento block. </p>
 				<p>lComumente usamos inline para destacar algumas palavras com sublinhados, negritos, itálicos ou com cores diferentes.</p>
 				<br>
 				<div style="border: 1px solid #000; padding: 10px; width: 100%;"><span>Elemento inline que tem um <span style="color: red;">elemento inline</span> dentro dele e os dois estão dentro de um elemento block que agrupa os dois.</span></div>
@@ -77,7 +61,7 @@
 			<div class="down"><span>↑</span></div>
 		</section>
 
-		<section class="first">
+		<section>
 			<div class="content">
 				<h1>Semântica</h1>
 			</div>
@@ -143,10 +127,58 @@
 					<span class="tag">&lt;div</span>
 					<span class="error">id="intro"</span><span class="tag">&gt;</span> Outro conteúdo <span class="tag">&lt;/div&gt;</span>
 				</code>
-				<p>Posso repetir um id? <em class="gif-no-trigger" style="cursor: pointer;">Clique aqui pra saber</em>. IDs são como serial number de produtos, são usados para identificar um elemento <em>único</em> na página.</p>
+				<p>Posso repetir um id? <em class="gif-no-trigger" onclick="play()" style="cursor: pointer;">Clique aqui pra saber</em>. IDs são como serial number de produtos, são usados para identificar um elemento <em>único</em> na página.</p>
 				<audio id="audio" src="no.mp3" ></audio>
-				<img src="https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif" class="gif-no" alt="">
 
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>nomeando classes e ids</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Uma das boas práticas mais apoiada diz que as classes e os ids devem ser nomeados em relação à função e não à aparência. Ou seja, se formos criar uma <span class="tag">div</span> com fundo azul para as redes sociais, escreveríamos:</p>
+				<code>
+					<span class="tag">&lt;div</span>
+					<span class="attribute">class="</span><span class="value">social</span><span class="attribute">"</span><span class="tag">&gt;</span> facebook | twitter <span class="tag">&lt;/div&gt;</span>
+				</code>
+				<p>e não:</p>
+				<code>
+					<span class="tag">&lt;div</span>
+					<span class="attribute">class="</span><span class="value">fundo-azul</span><span class="attribute">"</span><span class="tag">&gt;</span> facebook | twitter <span class="tag">&lt;/div&gt;</span>
+				</code>
+				<p>Assim, se essa <span class="tag">div</span> mudar de fundo azul pra vermelho no futuro, o nome "fundo-azul" não fará mais sentido mas o "social" sim.</p>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+
+		<section>
+			<div class="content">
+				<h1>Estruturando</h1>
+			</div>
+			<div class="up"><span>↑</span></div>
+			<div class="down"><span>↑</span></div>
+		</section>
+		<section>
+			<div class="content">
+				<p>Por muito tempo o único jeito de contruir páginas era com <span class="tag">&lt;div></span> e isso ainda é possível, porém, é semânticamente prejudicial.</p>
+				<p>Com a atualização do HTML 5 foram criados alguns novos elementos block que tem a mesma função de uma div, mas com nomes melhores.</p>
+				<br>
+				<p><em>Header</em>: usado para topos de páginas ou seções.</p>
+				<p><em>Nav</em>: identifica navegações principais (menu).</p>
+				<p><em>Article</em>: conteúdo independente, que pode ser usado fora da página. Post de blog, notícia, conteúdos em geral.</p>
+				<p><em>Section</em>: agrupa conteúdos com mesmo tema</p>
+				<p><em>Footer</em>: autoexplicativo</p>
+
+				</p>
 			</div>
 			<div class="up"><span>↑</span></div>
 			<div class="down"><span>↑</span></div>
