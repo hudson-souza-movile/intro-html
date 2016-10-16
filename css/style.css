@@ -337,6 +337,12 @@ section .up span, section .down span {
 /*colors*/
 .tag, .selector {
 	color: #ff7b29;
+	background: #eee;
+	padding: 0px 4px;
+}
+
+code .tag, code .seletor {
+	padding: 0px;
 }
 
 .attribute, .property {
