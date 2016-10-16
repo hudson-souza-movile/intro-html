@@ -335,12 +335,16 @@ section .up span, section .down span {
 }
 
 /*colors*/
-.tag {
+.tag, .selector {
 	color: #ff7b29;
 }
 
-.attribute {
+.attribute, .property {
 	color: #2db34a;
+}
+
+.property {
+	margin-left: 20px;
 }
 
 .value {
