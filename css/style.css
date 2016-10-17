@@ -157,6 +157,13 @@ section > .content  p > em {
 	z-index: 2;
 }
 
+section > .content  a {
+	line-height: 1.5;
+	margin-top: 0px;
+	font-size: 20px;
+	color: #331771;
+}
+
 section > .content  p > em::before {
 	content: '';
 	position: absolute;

@@ -8,6 +8,13 @@ $(document).ready(function(){
 	$(".next").on('click', function(){
 		nextPage();
 	});
+	$(".table-link").on('click', function(){
+		$("main").css("transform", "translateX(-100vw)");
+		var href = $(this).attr("title");
+		window.setTimeout(function(){
+			window.location.href = href;
+		}, 500);
+	});
 	$(".prev").on('click', function(){
 		prevPage();
 	});
